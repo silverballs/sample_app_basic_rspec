@@ -49,3 +49,8 @@ it "should have the right title" do
 end
 
 5.  I left the views commented out so you can see what woul dhave needed to be without the application layout being in place for each view
+
+
+6.  Don't forget to git checkout master and merge static-pages!
+
+7.  I will try to re organize this when I have the time soon... 
