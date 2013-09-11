@@ -33,3 +33,19 @@ Getting up to speed:
 3. Change spec/spec_helper.rb and add config.include Capybara::DSL
 4.  To begin testing run  bundle exec rspec spec/requests/static_pages_spec.rb
 5.  note that the block we put into the spec/requests/static_pages_spec.rb contain some things in quotes that the tests are looking for.  This is a vague example so for the home page... it could have Sample App in a variety of places for it to pass... Doesn't have to be in the title for example... 
+
+# Adding a page that does not exist... remember we only created a controller for Home and help at first... 
+1.  if you run the same test you have been running for the about page it will not work of course.. follow the hints it gives you to keep adding what it needs to finally pass!
+
+2.  add get "static_pages/about" to the config/routes file
+
+3.  finally, the 3rd test for about tells us we need to add a view based on the missing template. 
+
+4. Now doing a title test by adding:  note we also moved the app/views/layouts/application.html.erb temorarily for this
+
+it "should have the right title" do
+  visit '/static_pages/home'
+  expect(page).to have_title("Ruby on Rails Tutorial Sample App | Home")
+end
+
+5.  I left the views commented out so you can see what woul dhave needed to be without the application layout being in place for each view
