@@ -25,3 +25,11 @@ Getting up to speed:
 *  to find out how to delete or undo things you can always run rails generate -h and go from there but if you refer to the tutorial on the top link Michael gives some good examples.  
 
 
+# THIRD  - OUR FIRST TEST
+
+1. rails g integration_test static_pages which invokes rspec to create a file
+	spec/requests/static_pages_spec.rb
+2. Change the spec/requests/static_pages_spec.rb
+3. Change spec/spec_helper.rb and add config.include Capybara::DSL
+4.  To begin testing run  bundle exec rspec spec/requests/static_pages_spec.rb
+5.  note that the block we put into the spec/requests/static_pages_spec.rb contain some things in quotes that the tests are looking for.  This is a vague example so for the home page... it could have Sample App in a variety of places for it to pass... Doesn't have to be in the title for example... 
